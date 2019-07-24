@@ -1,0 +1,69 @@
+DOCKER COMMANDS
+docker exec -it 1c5b3019e22e   sh
+docker run -it busybox sh
+docker build -t hark3003/simpleweb .
+docker run -p 8080:8080 hark3003/simpleweb
+docker build .
+docker ps
+docker run redis
+docker-compose up
+docker-compose up --build
+docker run -d redis
+docker stop 37453787128
+docker-compose up -d
+docker-compose down
+docker-compose ps
+sudo npm install -g create-react-app
+create-react-app frontend
+npm run test
+npm run build
+npm run start
+docker build -f Dockerfile.dev .
+docker run -p 3000:3000 d17e5d2375
+docker build -f Dockerfile.dev
+docker run -p 3000:3000 -v /app/node_modules -v $(pwd):/app 85dfda607561
+docker run e58faa861ace npm run test
+docker run -it e58faa861ace npm run test
+
+Dev + test:
+docker-compose up
+docker exec -it f6d33c54d8f3   npm run test
+
+docker-compose up --build
+docker attach 4416fceeb3d9
+docker exec -it f6d33c54d8f3
+
+
+AWS:
+Logon to aws -> search elastic beanstalk -> create new app -> enter details(docker) ->create 
+Create env now-> web server env 
+In base config -> platform -> docker -> app code-> sample -> create env
+“Url at top is the address - elastic beanstalk instance”
+
+
+Services->s3-> “search for the ebstalk instance name” -> open it -> name of bucket is on the top similar to ebstalk url 
+
+Services->iam -> users on left -> add user-> give username”docker-react-travis-ci” -> access”prog” ->next -> attach existing policies -> search beanstalk -> check it-> next review -> create user
+Copy access key.
+
+
+After deployment-> click on link above -> application opens
+
+TRAVIS:
+In travis-> more options -> settings -> env variables -> AWS_ACCESS_KEY :”value”
+AWS_SECRET_KEY:”value”
+
+
+GIT COMMANDS:
+git init
+git add .
+git commit -m "initial commit"
+git remote add origin https://github.com/“folderpath”.git
+git push origin master
+git add .
+git commit -m "added travis file"
+git push origin master
+git checkout -b feature
+git add .
+git commit -m "changed app text"
+git push origin feature
