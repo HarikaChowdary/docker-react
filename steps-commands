@@ -58,7 +58,7 @@ GIT COMMANDS:
 git init
 git add .
 git commit -m "initial commit"
-git remote add origin https://github.com/“folderpath”.git
+git remote add origin "repo link"
 git push origin master
 git add .
 git commit -m "added travis file"
